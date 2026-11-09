@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tempo para surpresa</title>
+<title>Espero que você goste do presente</title>
 
 <style>
     body {
@@ -72,68 +72,10 @@
 
 <body>
 <div class="container">
-    <h1>Tempo pra sua surpresa</h1>
-
-    <div class="timer">
-        <div class="box">
-            <div class="number" id="months">0</div>
-            <div class="label">Meses</div>
-        </div>
-        <div class="box">
-            <div class="number" id="weeks">0</div>
-            <div class="label">Semanas</div>
-        </div>
-        <div class="box">
-            <div class="number" id="days">0</div>
-            <div class="label">Dias</div>
-        </div>
-        <div class="box">
-            <div class="number" id="hours">0</div>
-            <div class="label">Horas</div>
-        </div>
-        <div class="box">
-            <div class="number" id="minutes">0</div>
-            <div class="label">Minutos</div>
-        </div>
-        <div class="box">
-            <div class="number" id="seconds">0</div>
-            <div class="label">Segundos</div>
-        </div>
-    </div>
-
-    <br>
+    <h1></h1>
 
     <button onclick="window.location.href='https://share.google/gGaWd3sPLpWiQsQBq'">
         Joguinho
     </button>
-</div>
-
-<script>
-function atualizarTimer() {
-    const agora = new Date();
-    const alvo = new Date("2027-11-14T00:00:00");
-
-    let diff = alvo - agora;
-    if (diff <= 0) return;
-
-    const segundos = Math.floor(diff / 1000);
-    const minutos = Math.floor(segundos / 60);
-    const horas = Math.floor(minutos / 60);
-    const dias = Math.floor(horas / 24);
-    const semanas = Math.floor(dias / 7);
-    const meses = Math.floor(dias / 30);
-
-    document.getElementById("months").innerText = meses;
-    document.getElementById("weeks").innerText = semanas;
-    document.getElementById("days").innerText = dias;
-    document.getElementById("hours").innerText = horas % 24;
-    document.getElementById("minutes").innerText = minutos % 60;
-    document.getElementById("seconds").innerText = segundos % 60;
-}
-
-setInterval(atualizarTimer, 1000);
-atualizarTimer();
-</script>
-
 </body>
   </html>
